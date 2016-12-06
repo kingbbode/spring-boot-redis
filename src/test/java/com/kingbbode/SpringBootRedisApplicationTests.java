@@ -33,6 +33,7 @@ public class SpringBootRedisApplicationTests {
     @Before
     public void init() {
         //list put
+        valueOperations.set("test:line", "-------");
         listOperations.rightPush("test:task", "자기소개");
         listOperations.rightPush("test:task", "취미소개");
         listOperations.rightPush("test:task", "소망소개");
@@ -55,6 +56,7 @@ public class SpringBootRedisApplicationTests {
         String task = listOperations.leftPop("test:task");
         StringBuilder stringBuilder = new StringBuilder();
         while (task != null) {
+            valueOperations.get("test:line");
             switch (task) {
                 case "자기소개":
                     Map<String, String> intro = hashOperations.entries("test:user:kingbbode");
