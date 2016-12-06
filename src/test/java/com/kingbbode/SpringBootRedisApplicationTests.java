@@ -33,7 +33,7 @@ public class SpringBootRedisApplicationTests {
     @Before
     public void init() {
         //list put
-        valueOperations.set("test:line", "-------\n");
+        valueOperations.set("test:line", "\n-------\n");
         listOperations.rightPush("test:task", "자기소개");
         listOperations.rightPush("test:task", "취미소개");
         listOperations.rightPush("test:task", "소망소개");
