@@ -14,9 +14,9 @@ public class RedisConfig {
     public JedisConnectionFactory jedisConnectionFactory() {
 
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
-        jedisConnectionFactory.setHostName("xxx.xxx.xxx.xxx");
+        jedisConnectionFactory.setHostName("sample");
         jedisConnectionFactory.setPort(6379);
-        jedisConnectionFactory.setTimeout(0);
+        jedisConnectionFactory.setTimeout(30000);
         jedisConnectionFactory.setUsePool(true);
 
         return jedisConnectionFactory;
